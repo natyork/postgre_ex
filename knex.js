@@ -9,7 +9,7 @@ const knex = require('knex')({
 });
 
 
-module.export = {
+module.exports = {
   lookupPeople: (input) => {
     knex.select().from('famous_people').where('last_name', input).asCallback(function (err,result) {
       if (err) {
@@ -33,3 +33,4 @@ module.export = {
     });
   }
 }
+
